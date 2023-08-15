@@ -1,8 +1,7 @@
-import webpack from 'webpack';
-import {buildWebpackConfig} from "./buildWebpackConfig";
-import {BuildMode, BuildPaths} from "./types";
-import path from "path";
-import * as process from "process";
+import webpack from 'webpack'
+import { buildWebpackConfig } from './buildWebpackConfig'
+import { BuildMode, BuildPaths } from './types'
+import path from 'path'
 
 const paths: BuildPaths = {
   entry: path.resolve('src', 'index.tsx'),
@@ -25,4 +24,4 @@ const config: webpack.Configuration = buildWebpackConfig(
   }
 )
 
-export default config;
+export default config
