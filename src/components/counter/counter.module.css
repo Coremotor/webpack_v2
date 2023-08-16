@@ -1,4 +1,6 @@
 .green {
-    color: green;
-    width: 100px;
+  position: sticky;
+  display: flex;
+  width: 100px;
+  color: red;
 }
