@@ -1,0 +1,20 @@
+{
+  "shared": {
+    "ok": "Ok"
+  },
+  "authorization": {
+    "title": "Вход в личный кабинет",
+    "emailInputLabel": "Ваш email",
+    "passwordInputLabel": "Ваш пароль",
+    "placeholderPassword": "Введите пароль",
+    "button": "Войти",
+    "TLButton": "Войти через TravelLine"
+  },
+  "navigation": {
+    "mainScreen": "Главный экран"
+  },
+  "noFound": {
+    "goToMainPage": "Перейти на главную",
+    "subTitle": "Извините, страница, которую вы посетили, не существует."
+  }
+}

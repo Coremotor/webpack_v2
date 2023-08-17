@@ -1,7 +1,8 @@
+import path from 'path';
 import webpack from 'webpack';
+
 import { buildWebpackConfig } from './buildWebpackConfig';
 import { BuildMode, BuildPaths } from './types';
-import path from 'path';
 
 const paths: BuildPaths = {
   entry: path.resolve('src', 'index.tsx'),
@@ -11,7 +12,7 @@ const paths: BuildPaths = {
   src: path.resolve('src'),
 };
 
-const mode = (process.env.MODE || BuildMode.Development) as BuildMode;
+const mode = (process.env.NODE_ENV || BuildMode.Development) as BuildMode;
 const isDev = mode === BuildMode.Development;
 const port = process.env.PORT ? +process.env.PORT : 5000;
 

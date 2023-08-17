@@ -1,0 +1,10 @@
+.logo {
+  margin-right: 6px;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+}
