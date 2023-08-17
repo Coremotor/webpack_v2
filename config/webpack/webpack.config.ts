@@ -10,6 +10,8 @@ const paths: BuildPaths = {
   favicon: path.resolve('public', 'favicon.ico'),
   build: path.resolve('build'),
   src: path.resolve('src'),
+  copyLocalesFrom: path.resolve('public/locales'),
+  copyLocalesTo: path.resolve('build/locales'),
 };
 
 const mode = (process.env.NODE_ENV || BuildMode.Development) as BuildMode;

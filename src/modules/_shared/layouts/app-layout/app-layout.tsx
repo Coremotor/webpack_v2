@@ -14,6 +14,8 @@ export const AppLayout = () => {
         width={250}
         breakpoint='lg'
         collapsedWidth='0'
+        collapsible
+        trigger={null}
       >
         <img className={styles.logo} src={logo} alt='Comfort booking' />
         <Navigation />

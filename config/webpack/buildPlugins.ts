@@ -1,3 +1,5 @@
+// eslint-disable-next-line import/default
+import CopyPlugin from 'copy-webpack-plugin';
 import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
@@ -11,6 +13,15 @@ export function buildPlugins(
   const { paths, isDev } = options;
   const plugins = [
     new ForkTsCheckerWebpackPlugin(),
+
+    new CopyPlugin({
+      patterns: [
+        {
+          from: paths.copyLocalesFrom,
+          to: paths.copyLocalesTo,
+        },
+      ],
+    }),
 
     new HtmlWebpackPlugin({
       template: paths.html,
