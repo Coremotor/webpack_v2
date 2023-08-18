@@ -7,12 +7,14 @@ export const useMobileNavigation = () => {
   const dispatch = useAppDispatch();
   const [showNavigation, setShowNavigation] = useState(false);
 
+  const isMobileScreenSize = () => window.innerWidth <= breakpoints.md;
+
   const toggleShowNavigation = () =>
     setShowNavigation((prevState) => !prevState);
 
   const handleWindowResize = useCallback(() => {
-    dispatch(setIsMobile(window.innerWidth <= breakpoints.md));
-    setShowNavigation(window.innerWidth <= breakpoints.md);
+    dispatch(setIsMobile(isMobileScreenSize()));
+    setShowNavigation(isMobileScreenSize());
   }, [dispatch]);
 
   useEffect(() => {
