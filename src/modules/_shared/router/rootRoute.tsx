@@ -1,9 +1,11 @@
-import { Authorization, MainScreen, NoFound } from 'modules';
-import { AppLayout } from 'modules/_shared/layouts';
-import { Route, Routes } from 'react-router-dom';
+import { Authorization, MainScreen, NoFound } from "modules";
+import { AppLayout } from "modules/_shared/layouts";
+import PageWithError from "modules/page-with-error/page-with-error";
+import Two from "modules/two/two";
+import { Route, Routes } from "react-router-dom";
 
-import { Protected } from './protected';
-import { RoutesEnum } from './routes';
+import { Protected } from "./protected";
+import { RoutesEnum } from "./routes";
 
 const RootRoute = () => {
   return (
@@ -16,6 +18,24 @@ const RootRoute = () => {
           element={
             <Protected>
               <MainScreen />
+            </Protected>
+          }
+        />
+
+        <Route
+          path={RoutesEnum.PageWithError}
+          element={
+            <Protected>
+              <PageWithError />
+            </Protected>
+          }
+        />
+
+        <Route
+          path={RoutesEnum.Two}
+          element={
+            <Protected>
+              <Two />
             </Protected>
           }
         />

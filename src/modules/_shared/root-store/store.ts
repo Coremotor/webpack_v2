@@ -1,6 +1,6 @@
-import { configureStore } from '@reduxjs/toolkit';
-import { isDev } from 'modules/_shared/config/env';
-import { rootReducer } from 'modules/_shared/root-store/rootReduser';
+import { configureStore } from "@reduxjs/toolkit";
+import { isDev } from "modules/_shared/config/env";
+import { rootReducer } from "modules/_shared/root-store/rootReduser";
 
 export const store = configureStore({
   reducer: rootReducer,

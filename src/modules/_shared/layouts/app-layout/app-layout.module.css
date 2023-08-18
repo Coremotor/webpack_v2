@@ -5,6 +5,7 @@
 
 .logo {
   width: 150px;
+  margin-right: auto;
   padding: 20px;
 }
 
@@ -13,9 +14,17 @@
   border-right: 1px solid var(--layout-border-color);
 }
 
+.sider-header {
+  display: flex;
+  align-items: center;
+}
+
 .header {
   display: flex;
+  align-items: center;
+
   padding: 0 20px;
+
   background-color: var(--app-background-color);
   border-bottom: 1px solid var(--layout-border-color);
 }
@@ -24,4 +33,23 @@
   overflow: auto;
   padding: var(--content-padding);
   background-color: var(--app-background-color);
+}
+
+.btn {
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-right: 20px;
+  padding: 5px;
+
+  background-color: var(--app-background-color);
+  border: 1px solid var(--layout-border-color);
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: var(--layout-border-color);
 }

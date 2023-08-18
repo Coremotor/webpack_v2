@@ -1,7 +1,7 @@
-import { Spin } from 'modules/_shared/ui';
+import { Spin } from "modules/_shared/ui";
 
-import styles from './loader.module.css';
+import styles from "./loader.module.css";
 
 export const Loader = () => {
-  return <Spin className={styles.loader} size='large' />;
+  return <Spin className={styles.loader} size="large" />;
 };

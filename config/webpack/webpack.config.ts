@@ -1,17 +1,17 @@
-import path from 'path';
-import webpack from 'webpack';
+import path from "path";
+import webpack from "webpack";
 
-import { buildWebpackConfig } from './buildWebpackConfig';
-import { BuildMode, BuildPaths } from './types';
+import { buildWebpackConfig } from "./buildWebpackConfig";
+import { BuildMode, BuildPaths } from "./types";
 
 const paths: BuildPaths = {
-  entry: path.resolve('src', 'index.tsx'),
-  html: path.resolve('public', 'index.html'),
-  favicon: path.resolve('public', 'favicon.ico'),
-  build: path.resolve('build'),
-  src: path.resolve('src'),
-  copyLocalesFrom: path.resolve('public/locales'),
-  copyLocalesTo: path.resolve('build/locales'),
+  entry: path.resolve("src", "index.tsx"),
+  html: path.resolve("public", "index.html"),
+  favicon: path.resolve("public", "favicon.ico"),
+  build: path.resolve("build"),
+  src: path.resolve("src"),
+  copyLocalesFrom: path.resolve("public/locales"),
+  copyLocalesTo: path.resolve("build/locales"),
 };
 
 const mode = (process.env.NODE_ENV || BuildMode.Development) as BuildMode;

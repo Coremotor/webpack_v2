@@ -1,20 +1,25 @@
-import type { PayloadAction } from '@reduxjs/toolkit';
-import { createSlice } from '@reduxjs/toolkit';
-import type { Locale } from 'antd/es/locale';
-import localeRu from 'antd/locale/ru_RU';
-import { TAppState, TDirection } from 'modules/_shared/app-store/types';
+import type { PayloadAction } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
+import type { Locale } from "antd/es/locale";
+import localeRu from "antd/locale/ru_RU";
+import { TAppState, TDirection } from "modules/_shared/app-store/types";
+import { breakpoints } from "modules/_shared/breakpoints/breakpoints";
 
 const initialState: TAppState = {
+  isMobile: window.innerWidth <= breakpoints.md,
   isLoading: false,
   isDarkMode: false,
   locale: localeRu,
-  direction: 'ltr',
+  direction: "ltr",
 };
 
 const appSlice = createSlice({
-  name: 'app',
+  name: "app",
   initialState,
   reducers: {
+    setIsMobile(state: TAppState, action: PayloadAction<boolean>) {
+      state.isMobile = action.payload;
+    },
     setIsLoading(state: TAppState, action: PayloadAction<boolean>) {
       state.isLoading = action.payload;
     },
@@ -30,6 +35,6 @@ const appSlice = createSlice({
   },
 });
 
-export const { setIsLoading, setLocale, setDirection } = appSlice.actions;
+export const { setIsMobile, setLocale } = appSlice.actions;
 
 export default appSlice.reducer;

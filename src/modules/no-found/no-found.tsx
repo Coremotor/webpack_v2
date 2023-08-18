@@ -1,9 +1,9 @@
-import { RoutesEnum } from 'modules/_shared/router/routes';
-import { Button, Result } from 'modules/_shared/ui';
-import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router-dom';
+import { RoutesEnum } from "modules/_shared/router/routes";
+import { Button, Result } from "modules/_shared/ui";
+import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
-import styles from './no-found.module.css';
+import styles from "./no-found.module.css";
 
 export const NoFound = () => {
   const { t } = useTranslation();
@@ -13,12 +13,12 @@ export const NoFound = () => {
   return (
     <Result
       className={styles.image}
-      status='404'
-      title='404'
-      subTitle={t('noFound.subTitle')}
+      status="404"
+      title="404"
+      subTitle={t("noFound.subTitle")}
       extra={
-        <Button type='primary' onClick={goToMainPage}>
-          {t('noFound.goToMainPage')}
+        <Button type="primary" onClick={goToMainPage}>
+          {t("noFound.goToMainPage")}
         </Button>
       }
     />

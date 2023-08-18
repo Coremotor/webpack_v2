@@ -1,4 +1,4 @@
-import { DatePicker, Layout, Typography } from 'antd';
+import { DatePicker, Layout, Typography } from "antd";
 
 export {
   Alert,
@@ -27,7 +27,7 @@ export {
   Switch,
   Tabs,
   theme,
-} from 'antd';
+} from "antd";
 
 export const { Title, Text, Link } = Typography;
 export const { Footer, Header, Content, Sider } = Layout;

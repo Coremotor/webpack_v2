@@ -1,9 +1,9 @@
-import { useAppSelector } from 'modules/_shared/root-store/hooks';
-import { getIsAuth } from 'modules/authorization/store/selectors';
-import { FC, ReactNode } from 'react';
-import { Navigate, useLocation } from 'react-router-dom';
+import { useAppSelector } from "modules/_shared/root-store/hooks";
+import { getIsAuth } from "modules/authorization/store/selectors";
+import { FC, ReactNode } from "react";
+import { Navigate, useLocation } from "react-router-dom";
 
-import { RoutesEnum } from './routes';
+import { RoutesEnum } from "./routes";
 
 type TProtectedProps = {
   children: ReactNode;

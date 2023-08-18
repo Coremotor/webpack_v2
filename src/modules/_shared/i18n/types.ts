@@ -1,9 +1,9 @@
 export enum LangEnum {
-  Ru = 'ru',
-  En = 'en',
+  Ru = "ru",
+  En = "en",
 }
 
 export enum LocalesEnum {
-  RuRU = 'ru-RU',
-  EnUS = 'en-US',
+  RuRU = "ru-RU",
+  EnUS = "en-US",
 }

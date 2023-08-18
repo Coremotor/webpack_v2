@@ -1,8 +1,7 @@
-import { RoutesEnum } from 'modules/_shared/router/routes';
-import { Component, ErrorInfo, ReactNode } from 'react';
-import { Link } from 'react-router-dom';
+import { RoutesEnum } from "modules/_shared/router/routes";
+import { Component, ErrorInfo, ReactNode } from "react";
 
-import styles from './error-boundary.module.css';
+import styles from "./error-boundary.module.css";
 
 interface Props {
   children?: ReactNode;
@@ -22,7 +21,7 @@ export class ErrorBoundary extends Component<Props, State> {
   }
 
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('Uncaught error (error-boundary):', error, errorInfo);
+    console.error("Uncaught error (error-boundary):", error, errorInfo);
   }
 
   public render() {
@@ -31,7 +30,12 @@ export class ErrorBoundary extends Component<Props, State> {
         <div className={styles.content}>
           <div>
             <div>Что то пошло не так</div>
-            <Link to={RoutesEnum.MainScreen}>Вернуться на главную</Link>
+            <span
+              className={styles.link}
+              onClick={() => window.location.replace(RoutesEnum.MainScreen)}
+            >
+              Вернуться на главную
+            </span>
           </div>
         </div>
       );

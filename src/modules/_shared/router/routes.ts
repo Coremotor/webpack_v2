@@ -1,5 +1,7 @@
 export enum RoutesEnum {
-  MainScreen = '/',
-  Authorization = '/authorization',
-  NoMatch = '*',
+  MainScreen = "/",
+  PageWithError = "/page-with-error",
+  Two = "/two",
+  Authorization = "/authorization",
+  NoMatch = "*",
 }
