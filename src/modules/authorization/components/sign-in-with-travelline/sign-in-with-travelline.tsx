@@ -8,7 +8,7 @@ export const SignInWithTravelline = () => {
   const { t } = useTranslation();
 
   return (
-    <Button size="large" className={styles.button} block>
+    <Button className={styles.button} block>
       <Logo className={styles.logo} />
       <Text>{t("authorization.TLButton")}</Text>
     </Button>

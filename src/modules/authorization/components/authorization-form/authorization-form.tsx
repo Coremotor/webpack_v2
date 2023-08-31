@@ -6,6 +6,8 @@ import { TAuthorizationFormFields } from "modules/authorization/types";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
+import styles from "./styles.module.css";
+
 export const AuthorizationForm = () => {
   const { t } = useTranslation();
   const dispatch = useAppDispatch();
@@ -28,6 +30,7 @@ export const AuthorizationForm = () => {
       requiredMark={false}
     >
       <Form.Item
+        className={styles.item}
         label={t("authorization.emailInputLabel")}
         name="email"
         rules={[
@@ -39,7 +42,7 @@ export const AuthorizationForm = () => {
           },
         ]}
       >
-        <Input placeholder="name@company.com" size="large" />
+        <Input placeholder="name@company.com" />
       </Form.Item>
 
       <Form.Item
@@ -47,13 +50,10 @@ export const AuthorizationForm = () => {
         name="password"
         rules={[{ required: true }]}
       >
-        <Input.Password
-          placeholder={t("authorization.placeholderPassword")}
-          size="large"
-        />
+        <Input.Password placeholder={t("authorization.placeholderPassword")} />
       </Form.Item>
 
-      <Button size="large" type="primary" htmlType="submit" block>
+      <Button type="primary" htmlType="submit" block>
         {t("authorization.button")}
       </Button>
     </Form>
