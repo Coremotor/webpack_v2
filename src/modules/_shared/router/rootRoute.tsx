@@ -11,7 +11,7 @@ const RootRoute = () => {
   return (
     <Routes>
       <Route path={RoutesEnum.Authorization} element={<Authorization />} />
-      <Route path={RoutesEnum.NoMatch} element={<NoFound />} />
+      <Route path={RoutesEnum.NotFound} element={<NoFound />} />
       <Route path={RoutesEnum.MainScreen} element={<AppLayout />}>
         <Route
           index

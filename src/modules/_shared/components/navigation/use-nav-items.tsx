@@ -24,7 +24,7 @@ const navItems = [
   },
   {
     label: "Page no found",
-    route: "/no-found",
+    route: RoutesEnum.NotFound,
     icon: <IconHome />,
   },
 ];

@@ -8,7 +8,7 @@
     "build:prod": "cross-env NODE_ENV=production webpack --config config/webpack/webpack.config.ts",
     "build:dev": "cross-env NODE_ENV=development webpack --config config/webpack/webpack.config.ts"
   },
-  "author": "Andrey Demakov",
+  "author": "Andrei Demakov",
   "license": "ISC",
   "devDependencies": {
     "@svgr/webpack": "8.1.0",

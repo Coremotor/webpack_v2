@@ -3,5 +3,5 @@ export enum RoutesEnum {
   PageWithError = "/page-with-error",
   Two = "/two",
   Authorization = "/authorization",
-  NoMatch = "*",
+  NotFound = "*",
 }
