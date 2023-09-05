@@ -25,12 +25,12 @@ export const AppLayout = () => {
         collapsedWidth="0"
         collapsible
         trigger={null}
-        collapsed={showNavigation}
+        collapsed={!showNavigation}
       >
         <header className={styles["sider-header"]}>
           <img className={styles.logo} src={logo} alt="Comfort booking" />
 
-          {isMobile && !showNavigation && (
+          {isMobile && showNavigation && (
             <button className={styles.btn} onClick={toggleShowNavigation}>
               <CloseIcon />
             </button>
@@ -43,7 +43,7 @@ export const AppLayout = () => {
       </Sider>
       <Layout>
         <Header className={styles.header}>
-          {isMobile && showNavigation && (
+          {isMobile && !showNavigation && (
             <button className={styles.btn} onClick={toggleShowNavigation}>
               <MenuIcon />
             </button>
