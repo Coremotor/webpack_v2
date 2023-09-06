@@ -1,5 +1,6 @@
 // eslint-disable-next-line import/default
 import CopyPlugin from "copy-webpack-plugin";
+import Dotenv from "dotenv-webpack";
 import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
@@ -31,6 +32,10 @@ export function buildPlugins(
     new MiniCssExtractPlugin({
       filename: "css/[name].[chunkhash].css",
       chunkFilename: "css/[name].[chunkhash].chunk.css",
+    }),
+
+    new Dotenv({
+      path: `${options.paths.root}/.env.${options.mode}`,
     }),
 
     new webpack.ProgressPlugin(),

@@ -4,7 +4,7 @@
   "description": "comfort booking portal frontend application",
   "main": "index.ts",
   "scripts": {
-    "dev": "cross-env PORT=3000 webpack serve --config config/webpack/webpack.config.ts",
+    "dev": "webpack serve --config config/webpack/webpack.config.ts",
     "build:prod": "cross-env NODE_ENV=production webpack --config config/webpack/webpack.config.ts",
     "build:dev": "cross-env NODE_ENV=development webpack --config config/webpack/webpack.config.ts"
   },
@@ -12,6 +12,7 @@
   "license": "ISC",
   "devDependencies": {
     "@svgr/webpack": "8.1.0",
+    "@types/dotenv-webpack": "7.0.4",
     "@types/node": "20.5.9",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
@@ -20,6 +21,7 @@
     "copy-webpack-plugin": "11.0.0",
     "cross-env": "7.0.3",
     "css-loader": "6.8.1",
+    "dotenv-webpack": "8.0.1",
     "eslint": "8.48.0",
     "eslint-config-prettier": "9.0.0",
     "eslint-config-standard-with-typescript": "39.0.0",
@@ -59,6 +61,7 @@
     "i18next": "23.4.6",
     "i18next-browser-languagedetector": "7.1.0",
     "i18next-http-backend": "2.2.2",
+    "keycloak-js": "22.0.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-i18next": "13.2.2",

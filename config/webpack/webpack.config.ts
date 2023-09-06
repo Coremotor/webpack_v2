@@ -10,13 +10,14 @@ const paths: BuildPaths = {
   favicon: path.resolve("public", "favicon.ico"),
   build: path.resolve("build"),
   src: path.resolve("src"),
+  root: path.resolve(),
   copyLocalesFrom: path.resolve("public/locales"),
   copyLocalesTo: path.resolve("build/locales"),
 };
 
 const mode = (process.env.NODE_ENV || BuildMode.Development) as BuildMode;
 const isDev = mode === BuildMode.Development;
-const port = process.env.PORT ? +process.env.PORT : 5000;
+const port = 3000;
 
 const config: webpack.Configuration = buildWebpackConfig({
   mode,

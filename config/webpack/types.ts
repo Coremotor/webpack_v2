@@ -9,6 +9,7 @@ export interface BuildPaths {
   html: string;
   src: string;
   favicon: string;
+  root: string;
   copyLocalesFrom: string;
   copyLocalesTo: string;
 }

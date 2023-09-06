@@ -3,9 +3,10 @@ import { ErrorBoundary, Loader } from "modules/_shared/components";
 import i18n from "modules/_shared/i18n/i18n";
 import { useAppSelector } from "modules/_shared/root-store/hooks";
 import RootRoute from "modules/_shared/router/rootRoute";
+import { getProfile } from "modules/_shared/services/keycloak";
 import basicTheme from "modules/_shared/theme/basic.json";
 import { App as AntDApp, ConfigProvider } from "modules/_shared/ui";
-import { FC, Suspense } from "react";
+import { FC, Suspense, useEffect } from "react";
 import { I18nextProvider } from "react-i18next";
 import { BrowserRouter } from "react-router-dom";
 
@@ -14,6 +15,10 @@ import styles from "./app.module.css";
 export const App: FC = () => {
   const locale = useAppSelector(getLocale);
   const direction = useAppSelector(getDirection);
+
+  useEffect(() => {
+    getProfile().then((profile) => console.log(profile));
+  }, []);
 
   return (
     <Suspense fallback={<Loader />}>
