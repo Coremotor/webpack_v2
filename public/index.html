@@ -8,6 +8,42 @@
     <title>Comfort booking</title>
 </head>
 <body>
+
+<div id="app-loader">
+    <style scoped>
+        .app-loader__container {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: white;
+            z-index: 100;
+            display: grid;
+            place-items: center;
+        }
+        .app-loader__img {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+    <div class="app-loader__container">
+        <img alt="loader img" class="app-loader__img" src="./assets/logo-mini.svg" />
+    </div>
+</div>
+
+
 <div id="app"></div>
 </body>
 </html>

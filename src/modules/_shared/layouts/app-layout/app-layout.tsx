@@ -2,7 +2,7 @@ import CloseIcon from "assets/icons/close.svg";
 import MenuIcon from "assets/icons/hamburger-menu.svg";
 import logo from "assets/images/logo.png";
 import { getIsMobile } from "modules/_shared/app-store/selectors";
-import { AppHeader, Loader, Navigation } from "modules/_shared/components";
+import { AppHeader, Navigation } from "modules/_shared/components";
 import { useAppSelector } from "modules/_shared/root-store/hooks";
 import { Content, Header, Layout, Sider } from "modules/_shared/ui";
 import { Suspense } from "react";
@@ -51,7 +51,7 @@ export const AppLayout = () => {
           <AppHeader />
         </Header>
         <Content className={styles.content}>
-          <Suspense fallback={<Loader />}>
+          <Suspense>
             <Outlet />
           </Suspense>
         </Content>

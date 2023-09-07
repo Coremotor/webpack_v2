@@ -4,6 +4,7 @@ import Dotenv from "dotenv-webpack";
 import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import path from "path";
 import webpack from "webpack";
 
 import { BuildOptions } from "./types";
@@ -20,6 +21,10 @@ export function buildPlugins(
         {
           from: paths.copyLocalesFrom,
           to: paths.copyLocalesTo,
+        },
+        {
+          from: path.resolve("public/assets/logo-mini.svg"),
+          to: path.resolve("build/assets/logo-mini.svg"),
         },
       ],
     }),

@@ -4,16 +4,11 @@ import Backend from "i18next-http-backend";
 import { LangEnum } from "modules/_shared/i18n/types";
 import { initReactI18next } from "react-i18next";
 
-// eslint-disable-next-line import/no-named-as-default-member
-i18n
-  .use(Backend)
-  .use(LanguageDetector)
-  .use(initReactI18next)
-  .init({
-    lng: "ru",
-    fallbackLng: LangEnum.Ru,
-    debug: false,
-  })
-  .then(() => console.log("init i18n successful"));
+// eslint-disable-next-line import/no-named-as-default-member,no-void
+void i18n.use(Backend).use(LanguageDetector).use(initReactI18next).init({
+  lng: "ru",
+  fallbackLng: LangEnum.Ru,
+  debug: false,
+});
 
 export default i18n;

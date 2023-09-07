@@ -1,4 +1,5 @@
 import Keycloak from "keycloak-js";
+import { TKeycloakAuthStatus } from "modules/_shared/services/types";
 
 import { keycloakClientId, keycloakRealm, keycloakUrl } from "../config/env";
 
@@ -9,9 +10,7 @@ const _kc = new Keycloak({
 });
 
 export const initKeycloak = async (
-  onAuthenticated: () => void,
-  onNotAuthenticated: () => void,
-  onAuthenticatedError: () => void,
+  renderApp: (status: TKeycloakAuthStatus) => void,
 ) => {
   try {
     const authenticated = await _kc.init({
@@ -19,30 +18,30 @@ export const initKeycloak = async (
     });
 
     if (authenticated) {
-      onAuthenticated();
+      renderApp("authenticated");
     } else {
-      onNotAuthenticated();
+      renderApp("no-authenticated");
     }
   } catch (error) {
-    onAuthenticatedError();
+    renderApp("error");
   }
 };
 
-export const login = _kc.login;
+const doLogin = _kc.login;
 
-export const logout = _kc.logout;
+const doLogout = _kc.logout;
 
-export const token = () => _kc.token;
+const token = () => _kc.token;
 
-export const isLogged = () => !!_kc.token;
+const isLogged = () => !!_kc.token;
 
-export const getProfile = async () => {
-  try {
-    return await _kc.loadUserProfile();
-  } catch (e) {
-    console.log(e);
-  }
-};
-
-export const hasRole = (roles: string[]) =>
+const hasRole = (roles: string[]) =>
   roles.some((role) => _kc.hasRealmRole(role));
+
+export const keycloakClient = {
+  doLogin,
+  doLogout,
+  token,
+  isLogged,
+  hasRole,
+};

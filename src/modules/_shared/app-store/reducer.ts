@@ -35,6 +35,6 @@ const appSlice = createSlice({
   },
 });
 
-export const { setIsMobile, setLocale } = appSlice.actions;
+export const { setIsMobile, setLocale, setIsLoading } = appSlice.actions;
 
 export default appSlice.reducer;
