@@ -1,7 +1,11 @@
-import { Spin } from "modules/_shared/ui";
+import Logo from "assets/images/logo-mini.svg";
 
 import styles from "./loader.module.css";
 
 export const Loader = () => {
-  return <Spin className={styles.loader} size="large" />;
+  return (
+    <div className={styles.container}>
+      <Logo className={styles.img} />
+    </div>
+  );
 };

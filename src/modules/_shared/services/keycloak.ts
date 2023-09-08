@@ -31,7 +31,7 @@ const doLogin = _kc.login;
 
 const doLogout = _kc.logout;
 
-const token = () => _kc.token;
+const getToken = () => _kc.token;
 
 const isLogged = () => !!_kc.token;
 
@@ -41,7 +41,7 @@ const hasRole = (roles: string[]) =>
 export const keycloakClient = {
   doLogin,
   doLogout,
-  token,
+  getToken,
   isLogged,
   hasRole,
 };
