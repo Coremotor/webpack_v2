@@ -13,6 +13,8 @@ const paths: BuildPaths = {
   root: path.resolve(),
   copyLocalesFrom: path.resolve("public/locales"),
   copyLocalesTo: path.resolve("build/locales"),
+  copyAssetsFrom: path.resolve("public/assets"),
+  copyAssetsTo: path.resolve("build/assets"),
 };
 
 const mode = (process.env.NODE_ENV || BuildMode.Development) as BuildMode;

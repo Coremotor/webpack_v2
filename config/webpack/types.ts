@@ -12,6 +12,8 @@ export interface BuildPaths {
   root: string;
   copyLocalesFrom: string;
   copyLocalesTo: string;
+  copyAssetsFrom: string;
+  copyAssetsTo: string;
 }
 
 export interface BuildOptions {

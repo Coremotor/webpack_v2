@@ -1,10 +1,10 @@
+import ReactRefreshWebpackPlugin from "@pmmmwh/react-refresh-webpack-plugin";
 // eslint-disable-next-line import/default
 import CopyPlugin from "copy-webpack-plugin";
 import Dotenv from "dotenv-webpack";
 import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
-import path from "path";
 import webpack from "webpack";
 
 import { BuildOptions } from "./types";
@@ -23,8 +23,8 @@ export function buildPlugins(
           to: paths.copyLocalesTo,
         },
         {
-          from: path.resolve("public/assets/logo-mini.svg"),
-          to: path.resolve("build/assets/logo-mini.svg"),
+          from: paths.copyAssetsFrom,
+          to: paths.copyAssetsTo,
         },
       ],
     }),
@@ -48,7 +48,8 @@ export function buildPlugins(
 
   if (isDev) {
     plugins.push(new webpack.HotModuleReplacementPlugin());
+    plugins.push(new ReactRefreshWebpackPlugin());
   }
 
-  return plugins;
+  return plugins.filter(Boolean);
 }
