@@ -3,7 +3,7 @@ import {
   AuthorizationHeader,
   AuthorizationLayout,
   SignInWithTravelline,
-} from "./components";
+} from "modules/authorization/components";
 
 const Authorization = () => {
   return (

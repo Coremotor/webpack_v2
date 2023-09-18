@@ -6,7 +6,7 @@ COPY package*.json .
 
 RUN npm install
 
-COPY . .
+COPY .. .
 
 RUN npm run build:prod
 
@@ -14,7 +14,7 @@ FROM nginx:latest
 
 COPY --from=builder /usr/src/app/build /usr/share/nginx/html
 
-COPY /config/nginx /etc/nginx
+COPY /front/config/nginx /etc/nginx
 
 EXPOSE 80
 

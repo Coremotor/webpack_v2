@@ -1,7 +1,11 @@
 import Keycloak from "keycloak-js";
-import { TKeycloakAuthStatus } from "modules/_shared/services/types";
+import {
+  keycloakClientId,
+  keycloakRealm,
+  keycloakUrl,
+} from "modules/_shared/config/env";
 
-import { keycloakClientId, keycloakRealm, keycloakUrl } from "../config/env";
+import { TKeycloakAuthStatus } from "./types";
 
 const _kc = new Keycloak({
   url: keycloakUrl,

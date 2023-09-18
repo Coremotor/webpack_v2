@@ -1,5 +1,5 @@
-import { Authorization, MainScreen, NoFound } from "modules";
 import { AppLayout } from "modules/_shared/layouts";
+import { Authorization, MainScreen, NoFound } from "modules/index";
 import PageWithError from "modules/page-with-error/page-with-error";
 import Two from "modules/two/two";
 import { Route, Routes } from "react-router-dom";

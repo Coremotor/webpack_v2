@@ -10,7 +10,8 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "baseUrl": "src",
-    "typeRoots": ["src/typings", "node_modules/@types"],
+    "typeRoots": [
+      "src/typings", "node_modules/@types"],
     "sourceMap": false
   },
   "ts-node": {
@@ -18,5 +19,7 @@
       "module": "CommonJS"
     }
   },
-  "include": ["src/**/*"]
+  "include": [
+    "**/*"
+  ]
 }
