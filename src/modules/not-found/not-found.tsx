@@ -1,8 +1,9 @@
 import { RoutesEnum } from "modules/_shared/router/routes";
 import { Button, Result } from "modules/_shared/ui";
-import styles from "modules/not-found/not-found.module.css";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
+
+import styles from "./not-found.module.css";
 
 export const NotFound = () => {
   const { t } = useTranslation();
