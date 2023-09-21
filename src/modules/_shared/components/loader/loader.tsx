@@ -1,6 +1,6 @@
 import Logo from "assets/images/logo-mini.svg";
 
-import styles from "modules/_shared/components/loader/loader.module.css";
+import styles from "./loader.module.css";
 
 export const Loader = () => {
   return (

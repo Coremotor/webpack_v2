@@ -1,1 +1,1 @@
-export { AppLayout } from "modules/_shared/layouts/app-layout/app-layout";
+export { AppLayout } from "./app-layout/app-layout";

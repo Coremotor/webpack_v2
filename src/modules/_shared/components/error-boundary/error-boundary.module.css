@@ -1,15 +1,6 @@
 .content {
   position: fixed;
   inset: 0;
-
   display: grid;
   place-items: center;
-
-  text-align: center;
-}
-
-.link {
-  cursor: pointer;
-  margin-top: 20px;
-  text-decoration: underline;
 }

@@ -1,8 +1,8 @@
 import path from "path";
 import webpack from "webpack";
 
-import { buildWebpackConfig } from "config/webpack/buildWebpackConfig";
-import { BuildMode, BuildPaths } from "config/webpack/types";
+import { buildWebpackConfig } from "./buildWebpackConfig";
+import { BuildMode, BuildPaths } from "./types";
 
 const paths: BuildPaths = {
   entry: path.resolve("src", "index.tsx"),

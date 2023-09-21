@@ -1,10 +1,11 @@
 import axios, { AxiosError } from "axios";
-import { setIsLoading } from "modules/_shared/app-store/reducer";
+import { setIsLoading } from "modules/_shared/app/store/reducer";
+import { apiBaseUrl } from "modules/_shared/config/env";
 import { store } from "modules/_shared/root-store/store";
-import { keycloakClient } from "modules/_shared/services/keycloak";
+import { keycloakClient } from "modules/_shared/services/keycloak/keycloak";
 
 export const axiosRequest = axios.create({
-  baseURL: "http://localhost:3333",
+  baseURL: apiBaseUrl,
   responseType: "json",
 });
 
@@ -33,7 +34,7 @@ axiosRequest.interceptors.response.use(
   },
   async (error: AxiosError) => {
     store.dispatch(setIsLoading(false));
-    // do something with response OVER 2xx statuses
+    // do something with response 4xx, 5xx statuses
     return Promise.reject(error);
   },
 );

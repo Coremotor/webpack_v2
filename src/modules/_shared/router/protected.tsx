@@ -1,4 +1,4 @@
-import { keycloakClient } from "modules/_shared/services/keycloak";
+import { keycloakClient } from "modules/_shared/services/keycloak/keycloak";
 import { FC, ReactNode } from "react";
 
 type TProtectedProps = {

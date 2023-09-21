@@ -8,7 +8,7 @@ import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import webpack from "webpack";
 import { BundleAnalyzerPlugin } from "webpack-bundle-analyzer";
 
-import { BuildOptions } from "config/webpack/types";
+import { BuildOptions } from "./types";
 
 export function buildPlugins(
   options: BuildOptions,

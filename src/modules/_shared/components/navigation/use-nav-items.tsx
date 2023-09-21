@@ -1,10 +1,13 @@
 import type { MenuProps } from "antd";
+import IconError from "assets/icons/cancel.svg";
+import IconContract from "assets/icons/contract.svg";
 import IconHome from "assets/icons/home.svg";
+import IconWarning from "assets/icons/warning.svg";
 import classNames from "classnames";
 import { RoutesEnum } from "modules/_shared/router/routes";
 import { useTranslation } from "react-i18next";
 
-import styles from "modules/_shared/components/navigation/navigation.module.css";
+import styles from "./navigation.module.css";
 
 const navItems = [
   {
@@ -15,17 +18,17 @@ const navItems = [
   {
     label: "navigation.documentFlow",
     route: RoutesEnum.DocumentFlow,
-    icon: <IconHome />,
+    icon: <IconContract />,
   },
   {
     label: "Page with error",
     route: RoutesEnum.PageWithError,
-    icon: <IconHome />,
+    icon: <IconError />,
   },
   {
     label: "Page no found",
     route: RoutesEnum.NotFound,
-    icon: <IconHome />,
+    icon: <IconWarning />,
   },
 ];
 

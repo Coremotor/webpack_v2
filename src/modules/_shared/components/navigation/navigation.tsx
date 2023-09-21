@@ -1,10 +1,10 @@
 import type { MenuProps } from "antd";
-import { useNavItems } from "modules/_shared/components/navigation/use-nav-items";
 import { Menu } from "modules/_shared/ui";
 import { FC } from "react";
 import { useNavigate } from "react-router-dom";
 
-import styles from "modules/_shared/components/navigation/navigation.module.css";
+import styles from "./navigation.module.css";
+import { useNavItems } from "./use-nav-items";
 
 type TNavigationProps = {
   toggleShowNavigation: () => void;

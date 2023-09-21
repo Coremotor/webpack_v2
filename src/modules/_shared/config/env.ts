@@ -4,3 +4,4 @@ export const keycloakUrl = process.env.KEYCLOCK_URL;
 export const keycloakRealm = process.env.KEYCLOCK_REALM;
 export const keycloakClientId = process.env.KEYCLOCK_CLIENT_ID;
 export const dotENVFile = process.env.DOT_ENV_FILE;
+export const apiBaseUrl = process.env.API_BASE_URL;

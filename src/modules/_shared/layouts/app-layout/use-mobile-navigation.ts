@@ -1,4 +1,4 @@
-import { setIsMobile } from "modules/_shared/app-store/reducer";
+import { setIsMobile } from "modules/_shared/app/store/reducer";
 import { breakpoints } from "modules/_shared/breakpoints/breakpoints";
 import { useAppDispatch } from "modules/_shared/root-store/hooks";
 import { useCallback, useEffect, useState } from "react";

@@ -1,7 +1,8 @@
 import { RoutesEnum } from "modules/_shared/router/routes";
+import { Button, Result } from "modules/_shared/ui";
 import { Component, ErrorInfo, ReactNode } from "react";
 
-import styles from "modules/_shared/components/error-boundary/error-boundary.module.css";
+import styles from "./error-boundary.module.css";
 
 interface Props {
   children?: ReactNode;
@@ -28,15 +29,18 @@ export class ErrorBoundary extends Component<Props, State> {
     if (this.state.hasError) {
       return (
         <div className={styles.content}>
-          <div>
-            <div>Что то пошло не так</div>
-            <span
-              className={styles.link}
-              onClick={() => window.location.replace(RoutesEnum.MainScreen)}
-            >
-              Вернуться на главную
-            </span>
-          </div>
+          <Result
+            status="500"
+            subTitle="Что то пошло не так."
+            extra={
+              <Button
+                type="primary"
+                onClick={() => window.location.replace(RoutesEnum.MainScreen)}
+              >
+                Вернуться на главную
+              </Button>
+            }
+          />
         </div>
       );
     }

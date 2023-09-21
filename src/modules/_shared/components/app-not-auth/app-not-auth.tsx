@@ -1,9 +1,9 @@
-import { TKeycloakAuthStatus } from "modules/_shared/services/types";
+import { TKeycloakAuthStatus } from "modules/_shared/services/keycloak/types";
 import { Button, Result } from "modules/_shared/ui";
 import { removeAppLoader } from "modules/_shared/utils/remove-app-loader";
 import React, { FC, useEffect } from "react";
 
-import styles from "modules/_shared/components/app-not-auth/app-not-auth.module.css";
+import styles from "./app-not-auth.module.css";
 
 type TAppNotAuthProps = {
   status: TKeycloakAuthStatus;

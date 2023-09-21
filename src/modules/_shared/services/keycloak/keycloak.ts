@@ -4,8 +4,7 @@ import {
   keycloakRealm,
   keycloakUrl,
 } from "modules/_shared/config/env";
-
-import { TKeycloakAuthStatus } from "modules/_shared/services/types";
+import { TKeycloakAuthStatus } from "modules/_shared/services/keycloak/types";
 
 const _kc = new Keycloak({
   url: keycloakUrl,

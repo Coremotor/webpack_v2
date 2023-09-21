@@ -1,4 +1,3 @@
-import { getDirection, getLocale } from "modules/_shared/app-store/selectors";
 import { ErrorBoundary } from "modules/_shared/components";
 import i18n from "modules/_shared/i18n/i18n";
 import { useAppSelector } from "modules/_shared/root-store/hooks";
@@ -10,7 +9,8 @@ import { FC, Suspense, useEffect } from "react";
 import { I18nextProvider } from "react-i18next";
 import { BrowserRouter } from "react-router-dom";
 
-import styles from "modules/_shared/app/app.module.css";
+import styles from "./app.module.css";
+import { getDirection, getLocale } from "./store/selectors";
 
 export const App: FC = () => {
   const locale = useAppSelector(getLocale);

@@ -1,9 +1,9 @@
 import { LocaleSwitcher } from "modules/_shared/components/locale-switcher/locale-switcher";
 import { dotENVFile, mode } from "modules/_shared/config/env";
-import { keycloakClient } from "modules/_shared/services/keycloak";
+import { keycloakClient } from "modules/_shared/services/keycloak/keycloak";
 import { Button, Space, Text } from "modules/_shared/ui";
 
-import styles from "modules/_shared/components/app-header/app-header.module.css";
+import styles from "./app-header.module.css";
 
 export const AppHeader = () => {
   const { doLogout } = keycloakClient;

@@ -1,15 +1,14 @@
 import { AppLayout } from "modules/_shared/layouts";
-import { DocumentFlow, MainScreen, NoFound } from "modules/index";
-import PageWithError from "modules/page-with-error/page-with-error";
-import { Route, Routes } from "react-router-dom";
-
 import { Protected } from "modules/_shared/router/protected";
 import { RoutesEnum } from "modules/_shared/router/routes";
+import { DocumentFlow, MainScreen, NotFound } from "modules/index";
+import PageWithError from "modules/page-with-error/page-with-error";
+import { Route, Routes } from "react-router-dom";
 
 const RootRoute = () => {
   return (
     <Routes>
-      <Route path={RoutesEnum.NotFound} element={<NoFound />} />
+      <Route path={RoutesEnum.NotFound} element={<NotFound />} />
       <Route path={RoutesEnum.MainScreen} element={<AppLayout />}>
         <Route
           index

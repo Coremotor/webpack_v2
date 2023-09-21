@@ -1,6 +1,6 @@
 import { ResolveOptions } from "webpack";
 
-import { BuildOptions } from "config/webpack/types";
+import { BuildOptions } from "./types";
 
 export function buildResolvers(options: BuildOptions): ResolveOptions {
   const { paths } = options;

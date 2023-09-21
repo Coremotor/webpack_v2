@@ -2,15 +2,15 @@ import CloseIcon from "assets/icons/close.svg";
 import MenuIcon from "assets/icons/hamburger-menu.svg";
 import logo from "assets/images/logo.png";
 import classNames from "classnames";
-import { getIsLoading, getIsMobile } from "modules/_shared/app-store/selectors";
+import { getIsLoading, getIsMobile } from "modules/_shared/app/store/selectors";
 import { AppHeader, Loader, Navigation } from "modules/_shared/components";
 import { useAppSelector } from "modules/_shared/root-store/hooks";
 import { Content, Header, Layout, Sider } from "modules/_shared/ui";
 import { Suspense } from "react";
 import { Outlet } from "react-router-dom";
 
-import styles from "modules/_shared/layouts/app-layout/app-layout.module.css";
-import { useMobileNavigation } from "modules/_shared/layouts/app-layout/use-mobile-navigation";
+import styles from "./app-layout.module.css";
+import { useMobileNavigation } from "./use-mobile-navigation";
 
 export const AppLayout = () => {
   const isMobile = useAppSelector(getIsMobile);
