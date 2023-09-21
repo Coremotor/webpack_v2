@@ -1,0 +1,13 @@
+{
+  "shared": {
+    "ok": "Ok"
+  },
+  "navigation": {
+    "mainScreen": "Main screen",
+    "documentFlow": "Document flow"
+  },
+  "noFound": {
+    "goToMainPage": "Go to main page",
+    "subTitle": "Sorry, the page you visited does not exist."
+  }
+}

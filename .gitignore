@@ -1,5 +1,5 @@
 .idea
-front/node_modules
-front/build
-front/.env.development
-front/.env.production
+node_modules
+build
+.env.development
+.env.production

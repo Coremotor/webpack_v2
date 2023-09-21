@@ -1,0 +1,66 @@
+.layout {
+  width: 100%;
+  height: 100vh;
+  background: var(--app-background-color);
+}
+
+.logo {
+  width: 150px;
+  margin-right: auto;
+  padding: 20px;
+}
+
+.sider {
+  position: static;
+  z-index: 10;
+
+  min-height: 100vh;
+
+  background: var(--app-background-color);
+  border-right: 1px solid var(--layout-border-color);
+}
+
+.mobile-sider {
+  position: fixed !important;
+}
+
+.sider-header {
+  display: flex;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+
+  padding: 0 20px;
+
+  background-color: var(--app-background-color);
+  border-bottom: 1px solid var(--layout-border-color);
+}
+
+.content {
+  position: relative;
+  overflow: auto;
+  padding: var(--content-padding);
+  background-color: var(--app-background-color);
+}
+
+.btn {
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-right: 20px;
+  padding: 5px;
+
+  background-color: var(--app-background-color);
+  border: 1px solid var(--layout-border-color);
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: var(--layout-border-color);
+}
